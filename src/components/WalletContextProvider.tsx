@@ -42,7 +42,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
         new wallet.TokenaryWalletAdapter(),
         new wallet.TorusWalletAdapter(),
         new wallet.TrustWalletAdapter(),
-        new wallet.UnsafeBurnerWalletAdapter(),
+        // new wallet.UnsafeBurnerWalletAdapter(),
         // new wallet.WalletConnectWalletAdapter(),
         new wallet.XDEFIWalletAdapter()
     ]

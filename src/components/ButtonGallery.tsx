@@ -4,6 +4,8 @@ import React from 'react'
 import ReactWalletButton from './ReactWalletButton'
 
 import * as reactWallet from '@solana/wallet-adapter-react-ui'
+import * as muiWallet from '@solana/wallet-adapter-material-ui'
+import * as antWallet from '@solana/wallet-adapter-ant-design'
 
 import { SignTransaction } from './SignTransaction';
 import { SignMessage } from './SignMessage';
@@ -52,6 +54,60 @@ const ButtonGallery = () => {
                 </div>
                 <div className='flex flex-col h-1/4 items-center justify-center'>
                     <reactWallet.WalletMultiButton></reactWallet.WalletMultiButton>
+                </div>
+            </div>
+            <div className="h-2/5 justify-around">
+                <div className='flex flex-col h-1/3 items-center justify-center'>
+                    <SignTransaction></SignTransaction>
+                </div>
+                <div className='flex flex-col h-1/3 items-center justify-center'>
+                    <SignMessage></SignMessage>
+                </div>
+                <div className='flex flex-col h-1/3 items-center justify-center'>
+                    <SignIn></SignIn>
+                </div>
+            </div>
+        </div>
+        <div className="flex flex-col w-1/4 h-screen">
+            <div className="h-3/5 justify-around">
+                <div className='flex flex-col h-1/4 items-center justify-center'>
+                    <muiWallet.WalletConnectButton></muiWallet.WalletConnectButton>
+                </div>
+                <div className='flex flex-col h-1/4 items-center justify-center'>
+                    <muiWallet.WalletDisconnectButton></muiWallet.WalletDisconnectButton>
+                </div>
+                <div className='flex flex-col h-1/4 items-center justify-center'>
+                    <muiWallet.WalletDialogButton></muiWallet.WalletDialogButton>
+                </div>
+                <div className='flex flex-col h-1/4 items-center justify-center'>
+                    <muiWallet.WalletMultiButton></muiWallet.WalletMultiButton>
+                </div>
+            </div>
+            <div className="h-2/5 justify-around">
+                <div className='flex flex-col h-1/3 items-center justify-center'>
+                    <SignTransaction></SignTransaction>
+                </div>
+                <div className='flex flex-col h-1/3 items-center justify-center'>
+                    <SignMessage></SignMessage>
+                </div>
+                <div className='flex flex-col h-1/3 items-center justify-center'>
+                    <SignIn></SignIn>
+                </div>
+            </div>
+        </div>
+        <div className="flex flex-col w-1/4 h-screen">
+            <div className="h-3/5 justify-around">
+                <div className='flex flex-col h-1/4 items-center justify-center'>
+                    <antWallet.WalletConnectButton></antWallet.WalletConnectButton>
+                </div>
+                <div className='flex flex-col h-1/4 items-center justify-center'>
+                    <antWallet.WalletDisconnectButton></antWallet.WalletDisconnectButton>
+                </div>
+                <div className='flex flex-col h-1/4 items-center justify-center'>
+                    <antWallet.WalletModalButton></antWallet.WalletModalButton>
+                </div>
+                <div className='flex flex-col h-1/4 items-center justify-center'>
+                    <antWallet.WalletMultiButton></antWallet.WalletMultiButton>
                 </div>
             </div>
             <div className="h-2/5 justify-around">

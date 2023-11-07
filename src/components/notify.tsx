@@ -1,3 +1,5 @@
+"use client";
+
 import {
     // FIXME(https://github.com/mui/material-ui/issues/35233)
     Launch as LaunchIcon,
