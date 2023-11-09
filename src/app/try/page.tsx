@@ -133,16 +133,16 @@ const Try = () => {
           </div>
           <hr />
           <br />
-          <div className="p-2">
+          {/* <div className="p-2">
             <p className="font-bold">Select Wallets:</p>
             <ul className="p-2">
-            {/* <li>
+            <li>
                 <label>
                   <input type="checkbox" name="" onChange={toggleReact} /> {" React"}
                 </label>
-              </li> */}
+              </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="w-3/4">
