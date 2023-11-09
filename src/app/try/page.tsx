@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import * as reactWallet from '@solana/wallet-adapter-react-ui'
 // import * as muiWallet from '@solana/wallet-adapter-material-ui'
-// import * as antWallet from '@solana/wallet-adapter-ant-design'
+import * as antWallet from '@solana/wallet-adapter-ant-design'
 
 import { SignTransaction } from "@/components/SignTransaction";
 import { SignMessage } from "@/components/SignMessage";
@@ -218,7 +218,7 @@ const Try = () => {
               </div>}
             </div>
           </div>} */}
-          {/* {antToggle && <div id="ant-box" className="flex flex-col w-1/4 h-screen">
+          {antToggle && <div id="ant-box" className="flex flex-col w-1/4 h-screen">
             <div className="h-3/5 justify-around">
               {connectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
                 <antWallet.WalletConnectButton></antWallet.WalletConnectButton>
@@ -244,7 +244,7 @@ const Try = () => {
                 <SignIn></SignIn>
               </div>}
             </div>
-          </div>} */}
+          </div>}
         </div>
       </div>
     </div>

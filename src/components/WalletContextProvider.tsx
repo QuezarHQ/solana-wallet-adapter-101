@@ -6,13 +6,14 @@ import { createTheme, StyledEngineProvider, ThemeProvider } from '@mui/material'
 import { deepPurple, pink } from '@mui/material/colors';
 
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
-// import { WalletModalProvider as AntDesignWalletModalProvider } from '@solana/wallet-adapter-ant-design';
+import { WalletModalProvider as AntDesignWalletModalProvider } from '@solana/wallet-adapter-ant-design';
 // import { WalletDialogProvider as MaterialUIWalletDialogProvider } from '@solana/wallet-adapter-material-ui';
 import { WalletModalProvider as ReactUIWalletModalProvider } from '@solana/wallet-adapter-react-ui';
 
 import * as web3 from '@solana/web3.js'
 import * as wallet from '@solana/wallet-adapter-wallets';
 require('@solana/wallet-adapter-react-ui/styles.css')
+require('@solana/wallet-adapter-ant-design/styles.css')
 
 
 const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
@@ -62,11 +63,11 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
         <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={wallets}>
                 {/* <MaterialUIWalletDialogProvider> */}
-                    {/* <AntDesignWalletModalProvider> */}
+                    <AntDesignWalletModalProvider>
                         <ReactUIWalletModalProvider>
                             {children}
                         </ReactUIWalletModalProvider>
-                    {/* </AntDesignWalletModalProvider> */}
+                    </AntDesignWalletModalProvider>
                 {/* </MaterialUIWalletDialogProvider> */}
             </WalletProvider>
         </ConnectionProvider>
