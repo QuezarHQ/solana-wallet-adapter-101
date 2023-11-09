@@ -135,11 +135,11 @@ const How = () => {
             </p>
             <Codeblock code={codeWalletContextProviderSetup} language={languageJSX}></Codeblock>
             <p>
-              For reference, you can check out the full script <a href="" className="underline">here</a>.
+              For reference, you can check out the full script <a href="https://github.com/QuezarHQ/solana-wallet-adapter-101/blob/main/src/components/WalletContextProvider.tsx" className="underline">here</a>.
             </p>
             <br />
             <p>
-              Now that our component is ready, we wrap it around the root element of our application (full example <a href="" className="underline">here</a>)
+              Now that our component is ready, we wrap it around the root element of our application (full example <a href="https://github.com/QuezarHQ/solana-wallet-adapter-101/blob/main/src/app/layout.tsx" className="underline">here</a>)
             </p>
             <Codeblock code={codeWalletContextProviderConfiguration} language={languageJSX}></Codeblock>
             <p>
@@ -165,7 +165,7 @@ const How = () => {
             </p>
             <br />
             <p>
-              Similarly, you can include these buttons from other UI kits also. Check out <a href="" className="underline">this</a> script for example code.
+              Similarly, you can include these buttons from other UI kits also. Check out <a href="https://github.com/QuezarHQ/solana-wallet-adapter-101/blob/main/src/app/try/page.tsx" className="underline">this</a> script for example code.
             </p>
           </li>
         </ul>
