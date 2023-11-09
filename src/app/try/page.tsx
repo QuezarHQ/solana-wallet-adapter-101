@@ -74,17 +74,17 @@ const Try = () => {
             <ul className="p-2">
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleReact} /> {" React"}
+                  <input type="checkbox" name="" defaultChecked={reactToggle} onChange={toggleReact} /> {" React"}
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleMui} /> {" Material UI"}
+                  <input type="checkbox" name="" defaultChecked={muiToggle} onChange={toggleMui} /> {" Material UI"}
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleAnt} /> {" Ant Design"}
+                  <input type="checkbox" name="" defaultChecked={antToggle} onChange={toggleAnt} /> {" Ant Design"}
                 </label>
               </li>
             </ul>
@@ -96,37 +96,37 @@ const Try = () => {
             <ul className="p-2">
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleConnect} /> {" Connect Wallet Button"}
+                  <input type="checkbox" name="" defaultChecked={connectToggle} onChange={toggleConnect} /> {" Connect Wallet Button"}
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleDisconnect} /> {" Disconnect Wallet Button"}
+                  <input type="checkbox" name="" defaultChecked={disconnectToggle} onChange={toggleDisconnect} /> {" Disconnect Wallet Button"}
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleDialog} /> {" Dialog/Modal Button"}
+                  <input type="checkbox" name="" defaultChecked={dialogToggle} onChange={toggleDialog} /> {" Dialog/Modal Button"}
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleMulti} /> {" Multi Wallet Button"}
+                  <input type="checkbox" name="" defaultChecked={multiToggle} onChange={toggleMulti} /> {" Multi Wallet Button"}
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleSignTransaction} /> {" Sign Transaction Button"}
+                  <input type="checkbox" name="" defaultChecked={signTransactionToggle} onChange={toggleSignTransaction} /> {" Sign Transaction Button"}
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleSignMessage} /> {" Sign Message Button"}
+                  <input type="checkbox" name="" defaultChecked={signMessageToggle} onChange={toggleSignMessage} /> {" Sign Message Button"}
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="" onChange={toggleSignIn} /> {" Sign In Button"}
+                  <input type="checkbox" name="" defaultChecked={signInToggle} onChange={toggleSignIn} /> {" Sign In Button"}
                 </label>
               </li>
             </ul>
