@@ -4,8 +4,8 @@ import React from "react";
 import { useState } from "react";
 
 import * as reactWallet from '@solana/wallet-adapter-react-ui'
-import * as muiWallet from '@solana/wallet-adapter-material-ui'
-import * as antWallet from '@solana/wallet-adapter-ant-design'
+// import * as muiWallet from '@solana/wallet-adapter-material-ui'
+// import * as antWallet from '@solana/wallet-adapter-ant-design'
 
 import { SignTransaction } from "@/components/SignTransaction";
 import { SignMessage } from "@/components/SignMessage";
@@ -133,16 +133,6 @@ const Try = () => {
           </div>
           <hr />
           <br />
-          {/* <div className="p-2">
-            <p className="font-bold">Select Wallets:</p>
-            <ul className="p-2">
-            <li>
-                <label>
-                  <input type="checkbox" name="" onChange={toggleReact} /> {" React"}
-                </label>
-              </li>
-            </ul>
-          </div> */}
         </div>
       </div>
       <div className="w-3/4">
@@ -201,7 +191,7 @@ const Try = () => {
               </div>}
             </div>
           </div>}
-          {muiToggle && <div id="mui-box" className="flex flex-col w-1/4 h-screen">
+          {/* {muiToggle && <div id="mui-box" className="flex flex-col w-1/4 h-screen">
             <div className="h-3/5 justify-around">
               {connectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
                 <muiWallet.WalletConnectButton></muiWallet.WalletConnectButton>
@@ -227,8 +217,8 @@ const Try = () => {
                 <SignIn></SignIn>
               </div>}
             </div>
-          </div>}
-          {antToggle && <div id="ant-box" className="flex flex-col w-1/4 h-screen">
+          </div>} */}
+          {/* {antToggle && <div id="ant-box" className="flex flex-col w-1/4 h-screen">
             <div className="h-3/5 justify-around">
               {connectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
                 <antWallet.WalletConnectButton></antWallet.WalletConnectButton>
@@ -254,7 +244,7 @@ const Try = () => {
                 <SignIn></SignIn>
               </div>}
             </div>
-          </div>}
+          </div>} */}
         </div>
       </div>
     </div>

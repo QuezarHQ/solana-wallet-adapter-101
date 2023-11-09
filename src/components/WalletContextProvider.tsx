@@ -6,8 +6,8 @@ import { createTheme, StyledEngineProvider, ThemeProvider } from '@mui/material'
 import { deepPurple, pink } from '@mui/material/colors';
 
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
-import { WalletModalProvider as AntDesignWalletModalProvider } from '@solana/wallet-adapter-ant-design';
-import { WalletDialogProvider as MaterialUIWalletDialogProvider } from '@solana/wallet-adapter-material-ui';
+// import { WalletModalProvider as AntDesignWalletModalProvider } from '@solana/wallet-adapter-ant-design';
+// import { WalletDialogProvider as MaterialUIWalletDialogProvider } from '@solana/wallet-adapter-material-ui';
 import { WalletModalProvider as ReactUIWalletModalProvider } from '@solana/wallet-adapter-react-ui';
 
 import * as web3 from '@solana/web3.js'
@@ -51,7 +51,7 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
         new wallet.TokenaryWalletAdapter(),
         new wallet.TorusWalletAdapter(),
         new wallet.TrustWalletAdapter(),
-        new wallet.UnsafeBurnerWalletAdapter(),
+        // new wallet.UnsafeBurnerWalletAdapter(),
         // new wallet.WalletConnectWalletAdapter(),
         new wallet.XDEFIWalletAdapter()
     ]
@@ -61,13 +61,13 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     return (
         <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={wallets}>
-                <MaterialUIWalletDialogProvider>
-                    <AntDesignWalletModalProvider>
+                {/* <MaterialUIWalletDialogProvider> */}
+                    {/* <AntDesignWalletModalProvider> */}
                         <ReactUIWalletModalProvider>
                             {children}
                         </ReactUIWalletModalProvider>
-                    </AntDesignWalletModalProvider>
-                </MaterialUIWalletDialogProvider>
+                    {/* </AntDesignWalletModalProvider> */}
+                {/* </MaterialUIWalletDialogProvider> */}
             </WalletProvider>
         </ConnectionProvider>
     )

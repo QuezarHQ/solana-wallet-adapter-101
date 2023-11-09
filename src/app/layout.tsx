@@ -4,8 +4,6 @@ import type { Metadata } from 'next'
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WalletContextProvider from '@/components/WalletContextProvider';
-// import { ContextProvider } from '@/components/ContextProvider';
-
 
 export const metadata: Metadata = {
   title: 'Create Next App',
