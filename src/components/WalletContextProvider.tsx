@@ -1,14 +1,17 @@
 "use client";
 
 import { FC, ReactNode } from "react";
-
-import { createTheme, StyledEngineProvider, ThemeProvider } from '@mui/material';
-import { deepPurple, pink } from '@mui/material/colors';
+import dynamic from "next/dynamic";
 
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
 import { WalletModalProvider as AntDesignWalletModalProvider } from '@solana/wallet-adapter-ant-design';
 // import { WalletDialogProvider as MaterialUIWalletDialogProvider } from '@solana/wallet-adapter-material-ui';
 import { WalletModalProvider as ReactUIWalletModalProvider } from '@solana/wallet-adapter-react-ui';
+const MaterialUIWalletDialogProvider = dynamic(
+    async () => (await import("@solana/wallet-adapter-material-ui")).WalletDialogProvider,
+    { ssr: false }
+  );
+
 
 import * as web3 from '@solana/web3.js'
 import * as wallet from '@solana/wallet-adapter-wallets';
@@ -62,13 +65,13 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     return (
         <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={wallets}>
-                {/* <MaterialUIWalletDialogProvider> */}
+                <MaterialUIWalletDialogProvider>
                     <AntDesignWalletModalProvider>
                         <ReactUIWalletModalProvider>
                             {children}
                         </ReactUIWalletModalProvider>
                     </AntDesignWalletModalProvider>
-                {/* </MaterialUIWalletDialogProvider> */}
+                </MaterialUIWalletDialogProvider>
             </WalletProvider>
         </ConnectionProvider>
     )

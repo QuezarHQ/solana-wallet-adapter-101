@@ -2,14 +2,66 @@
 
 import React from "react";
 import { useState } from "react";
-
-import * as reactWallet from '@solana/wallet-adapter-react-ui'
-// import * as muiWallet from '@solana/wallet-adapter-material-ui'
-import * as antWallet from '@solana/wallet-adapter-ant-design'
+import dynamic from "next/dynamic";
 
 import { SignTransaction } from "@/components/SignTransaction";
 import { SignMessage } from "@/components/SignMessage";
 import { SignIn } from "@/components/SignIn";
+
+const ReactConnectButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-react-ui")).WalletConnectButton,
+  { ssr: false }
+);
+const ReactDisconnectButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-react-ui")).WalletDisconnectButton,
+  { ssr: false }
+);
+const ReactDialogButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-react-ui")).WalletModalButton,
+  { ssr: false }
+);
+const ReactMultiButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+  { ssr: false }
+);
+
+const MaterialConnectButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-material-ui")).WalletConnectButton,
+  { ssr: false }
+);
+const MaterialDisconnectButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-material-ui")).WalletDisconnectButton,
+  { ssr: false }
+);
+const MaterialDialogButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-material-ui")).WalletDialogButton,
+  { ssr: false }
+);
+const MaterialMultiButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-material-ui")).WalletMultiButton,
+  { ssr: false }
+);
+
+const AntConnectButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-ant-design")).WalletConnectButton,
+  { ssr: false }
+);
+const AntDisconnectButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-ant-design")).WalletDisconnectButton,
+  { ssr: false }
+);
+const AntDialogButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-ant-design")).WalletModalButton,
+  { ssr: false }
+);
+const AntMultiButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-ant-design")).WalletMultiButton,
+  { ssr: false }
+);
+
+
+
+
 
 const Try = () => {
 
@@ -167,16 +219,16 @@ const Try = () => {
           {reactToggle && <div id="react-box" className="flex flex-col w-1/4 h-screen">
             <div className="h-3/5 justify-around">
               {connectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <reactWallet.WalletConnectButton></reactWallet.WalletConnectButton>
+                <ReactConnectButton />
               </div>}
               {disconnectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <reactWallet.WalletDisconnectButton></reactWallet.WalletDisconnectButton>
+                <ReactDisconnectButton />
               </div>}
               {dialogToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <reactWallet.WalletModalButton></reactWallet.WalletModalButton>
+                <ReactDialogButton />
               </div>}
               {multiToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <reactWallet.WalletMultiButton></reactWallet.WalletMultiButton>
+                <ReactMultiButton />
               </div>}
             </div>
             <div className="h-2/5 justify-around">
@@ -191,19 +243,19 @@ const Try = () => {
               </div>}
             </div>
           </div>}
-          {/* {muiToggle && <div id="mui-box" className="flex flex-col w-1/4 h-screen">
+          {muiToggle && <div id="mui-box" className="flex flex-col w-1/4 h-screen">
             <div className="h-3/5 justify-around">
               {connectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <muiWallet.WalletConnectButton></muiWallet.WalletConnectButton>
+                <MaterialConnectButton />
               </div>}
               {disconnectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <muiWallet.WalletDisconnectButton></muiWallet.WalletDisconnectButton>
+                <MaterialDisconnectButton />
               </div>}
               {dialogToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <muiWallet.WalletDialogButton></muiWallet.WalletDialogButton>
+                <MaterialDialogButton />
               </div>}
               {multiToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <muiWallet.WalletMultiButton></muiWallet.WalletMultiButton>
+                <MaterialMultiButton />
               </div>}
             </div>
             <div className="h-2/5 justify-around">
@@ -217,20 +269,20 @@ const Try = () => {
                 <SignIn></SignIn>
               </div>}
             </div>
-          </div>} */}
+          </div>}
           {antToggle && <div id="ant-box" className="flex flex-col w-1/4 h-screen">
             <div className="h-3/5 justify-around">
               {connectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <antWallet.WalletConnectButton></antWallet.WalletConnectButton>
+                <AntConnectButton />
               </div>}
               {disconnectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <antWallet.WalletDisconnectButton></antWallet.WalletDisconnectButton>
+                <AntDisconnectButton />
               </div>}
               {dialogToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <antWallet.WalletModalButton></antWallet.WalletModalButton>
+                <AntDialogButton />
               </div>}
               {multiToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
-                <antWallet.WalletMultiButton></antWallet.WalletMultiButton>
+                <AntMultiButton />
               </div>}
             </div>
             <div className="h-2/5 justify-around">
