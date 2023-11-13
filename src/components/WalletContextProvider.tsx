@@ -3,9 +3,9 @@
 import { FC, ReactNode } from "react";
 import dynamic from "next/dynamic";
 
+import { SnackbarProvider } from "notistack";
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
 import { WalletModalProvider as AntDesignWalletModalProvider } from '@solana/wallet-adapter-ant-design';
-// import { WalletDialogProvider as MaterialUIWalletDialogProvider } from '@solana/wallet-adapter-material-ui';
 import { WalletModalProvider as ReactUIWalletModalProvider } from '@solana/wallet-adapter-react-ui';
 const MaterialUIWalletDialogProvider = dynamic(
     async () => (await import("@solana/wallet-adapter-material-ui")).WalletDialogProvider,
@@ -63,17 +63,19 @@ const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const endpoint = web3.clusterApiUrl('devnet')
 
     return (
-        <ConnectionProvider endpoint={endpoint}>
-            <WalletProvider wallets={wallets}>
-                <MaterialUIWalletDialogProvider>
-                    <AntDesignWalletModalProvider>
-                        <ReactUIWalletModalProvider>
-                            {children}
-                        </ReactUIWalletModalProvider>
-                    </AntDesignWalletModalProvider>
-                </MaterialUIWalletDialogProvider>
-            </WalletProvider>
-        </ConnectionProvider>
+        <SnackbarProvider autoHideDuration={3000}>
+            <ConnectionProvider endpoint={endpoint}>
+                <WalletProvider wallets={wallets}>
+                    <MaterialUIWalletDialogProvider>
+                        <AntDesignWalletModalProvider>
+                            <ReactUIWalletModalProvider>
+                                {children}
+                            </ReactUIWalletModalProvider>
+                        </AntDesignWalletModalProvider>
+                    </MaterialUIWalletDialogProvider>
+                </WalletProvider>
+            </ConnectionProvider>
+        </SnackbarProvider>
     )
 }
 

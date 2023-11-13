@@ -70,12 +70,12 @@ const Try = () => {
     setReactToggle(!reactToggle);
   }
 
-  const [muiToggle, setMuiToggle] = useState(true);
+  const [muiToggle, setMuiToggle] = useState(false);
   function toggleMui() {
     setMuiToggle(!muiToggle);
   }
 
-  const [antToggle, setAntToggle] = useState(true);
+  const [antToggle, setAntToggle] = useState(false);
   function toggleAnt() {
     setAntToggle(!antToggle);
   }
@@ -190,21 +190,24 @@ const Try = () => {
       <div className="w-3/4">
         <div className="flex flex-row h-screen bg-gray-300 m-5">
           <div className="flex flex-col w-1/4 h-screen">
-            <div className="h-3/5 justify-around">
-              {connectToggle && <div className='flex flex-col h-1/4 items-end justify-center'>
+            <div className="h-2/3 justify-around">
+              <div className='flex flex-col h-1/5 items-center justify-center'>
+                <p>{" "}</p>
+              </div>
+              {connectToggle && <div className='flex flex-col h-1/5 items-end justify-center'>
                 <p>Connect Wallet button</p>
               </div>}
-              {disconnectToggle && <div className='flex flex-col h-1/4 items-end justify-center'>
+              {disconnectToggle && <div className='flex flex-col h-1/5 items-end justify-center'>
                 <p>Disconnect Wallet button</p>
               </div>}
-              {dialogToggle && <div className='flex flex-col h-1/4 items-end justify-center'>
+              {dialogToggle && <div className='flex flex-col h-1/5 items-end justify-center'>
                 <p>Dialog/Modal button</p>
               </div>}
-              {multiToggle && <div className='flex flex-col h-1/4 items-end justify-center'>
+              {multiToggle && <div className='flex flex-col h-1/5 items-end justify-center'>
                 <p>Multi button</p>
               </div>}
             </div>
-            <div className="h-2/5 justify-around">
+            <div className="h-1/3 justify-around">
               {signTransactionToggle && <div className='flex flex-col h-1/3 items-end justify-center'>
                 <p>Sign Transaction</p>
               </div>}
@@ -217,21 +220,24 @@ const Try = () => {
             </div>
           </div>
           {reactToggle && <div id="react-box" className="flex flex-col w-1/4 h-screen">
-            <div className="h-3/5 justify-around">
-              {connectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+            <div className="h-2/3 justify-around">
+              <div className='flex flex-col h-1/5 items-center justify-center'>
+                <p>React UI</p>
+              </div>
+              {connectToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <ReactConnectButton />
               </div>}
-              {disconnectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+              {disconnectToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <ReactDisconnectButton />
               </div>}
-              {dialogToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+              {dialogToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <ReactDialogButton />
               </div>}
-              {multiToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+              {multiToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <ReactMultiButton />
               </div>}
             </div>
-            <div className="h-2/5 justify-around">
+            <div className="h-1/3 justify-around">
               {signTransactionToggle && <div className='flex flex-col h-1/3 items-center justify-center'>
                 <SignTransaction></SignTransaction>
               </div>}
@@ -244,21 +250,24 @@ const Try = () => {
             </div>
           </div>}
           {muiToggle && <div id="mui-box" className="flex flex-col w-1/4 h-screen">
-            <div className="h-3/5 justify-around">
-              {connectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+            <div className="h-2/3 justify-around">
+              <div className='flex flex-col h-1/5 items-center justify-center'>
+                <p>Material UI</p>
+              </div>
+              {connectToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <MaterialConnectButton />
               </div>}
-              {disconnectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+              {disconnectToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <MaterialDisconnectButton />
               </div>}
-              {dialogToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+              {dialogToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <MaterialDialogButton />
               </div>}
-              {multiToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+              {multiToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <MaterialMultiButton />
               </div>}
             </div>
-            <div className="h-2/5 justify-around">
+            <div className="h-1/3 justify-around">
               {signTransactionToggle && <div className='flex flex-col h-1/3 items-center justify-center'>
                 <SignTransaction></SignTransaction>
               </div>}
@@ -271,21 +280,24 @@ const Try = () => {
             </div>
           </div>}
           {antToggle && <div id="ant-box" className="flex flex-col w-1/4 h-screen">
-            <div className="h-3/5 justify-around">
-              {connectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+            <div className="h-2/3 justify-around">
+              <div className='flex flex-col h-1/5 items-center justify-center'>
+                <p>Ant Design</p>
+              </div>
+              {connectToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <AntConnectButton />
               </div>}
-              {disconnectToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+              {disconnectToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <AntDisconnectButton />
               </div>}
-              {dialogToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+              {dialogToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <AntDialogButton />
               </div>}
-              {multiToggle && <div className='flex flex-col h-1/4 items-center justify-center'>
+              {multiToggle && <div className='flex flex-col h-1/5 items-center justify-center'>
                 <AntMultiButton />
               </div>}
             </div>
-            <div className="h-2/5 justify-around">
+            <div className="h-1/3 justify-around">
               {signTransactionToggle && <div className='flex flex-col h-1/3 items-center justify-center'>
                 <SignTransaction></SignTransaction>
               </div>}

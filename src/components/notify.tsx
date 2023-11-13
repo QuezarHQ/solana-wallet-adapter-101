@@ -1,9 +1,6 @@
 "use client";
 
-import {
-    // FIXME(https://github.com/mui/material-ui/issues/35233)
-    Launch as LaunchIcon,
-} from '@mui/icons-material';
+import { Launch as LaunchIcon } from '@mui/icons-material';
 import { Link } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import type { VariantType } from 'notistack';
@@ -36,6 +33,9 @@ export function useNotify() {
 
     return useCallback(
         (variant: VariantType, message: string, signature?: string) => {
+            console.log(variant)
+            console.log(message)
+            console.log(signature)
             enqueueSnackbar(
                 <Notification>
                     {message}

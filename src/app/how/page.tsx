@@ -2,8 +2,6 @@
 
 import React from "react";
 import Codeblock from "@/components/Codeblock";
-import { Code } from "react-code-blocks";
-
 
 const How = () => {
 
@@ -11,13 +9,18 @@ const How = () => {
 
   const codeInstallUIPackages = `npm install -D @solana/wallet-adapter-react-ui`
 
-  const codeImportButtons = `import * as reactWallet from '@solana/wallet-adapter-react-ui'`
+  const codeImportButtons = `
+  import { WalletConnectButton } from '@solana/wallet-adapter-react-ui'
+  import { WalletDisconnectButton } from '@solana/wallet-adapter-react-ui'
+  import { WalletModalButton } from '@solana/wallet-adapter-react-ui'
+  import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
+  `
 
   const codeIncludeButtons = `
-  <reactWallet.WalletConnectButton></reactWallet.WalletConnectButton>
-  <reactWallet.WalletDisconnectButton></reactWallet.WalletDisconnectButton>
-  <reactWallet.WalletModalButton></reactWallet.WalletModalButton>
-  <reactWallet.WalletMultiButton></reactWallet.WalletMultiButton>
+  <WalletConnectButton />
+  <WalletDisconnectButton />
+  <WalletModalButton />
+  <WalletMultiButton />
   `
 
   const codeWalletContextProviderComponent = `
@@ -101,7 +104,7 @@ const How = () => {
             </p>
             <Codeblock code={codeInstallUIPackages} language={languageShell}></Codeblock>
             <p>
-              You can install packages for including other UI frameworks as well like Material UI or Ant Design. You can find the list of other supported frameworks <a href="https://github.com/solana-labs/wallet-adapter/blob/master/PACKAGES.md" className="underline">here</a>.
+              You can install packages for including other UI frameworks as well like Material UI or Ant Design. You'll find a list of other supported frameworks <a href="https://github.com/solana-labs/wallet-adapter/blob/master/PACKAGES.md" className="underline">here</a>.
             </p>
             <br />
             <p>
@@ -115,7 +118,7 @@ const How = () => {
             </h3>
             <br />
             <p>
-              Now, let&apos;s get your configuration files in order. You&apos;ll need to configure a "WalletContextProvider" for your application. So let's get started!
+              Now, let's get your configuration files in order. You'll need to configure a "WalletContextProvider" for your application. So let's get started!
             </p>
             <br />
             <p>
@@ -153,7 +156,7 @@ const How = () => {
             </h3>
             <br />
             <p>
-              Now comes the fun part! It&apos;s time to include the wallet buttons in your dApp. You can easily do this by importing the buttons in your component.
+              Now comes the fun part! It's time to include the wallet buttons in your dApp. You can easily do this by importing the buttons in your component.
             </p>
             <Codeblock code={codeImportButtons} language={languageJSX}></Codeblock>
             <p>
@@ -168,10 +171,38 @@ const How = () => {
               Similarly, you can include these buttons from other UI kits also. Check out <a href="https://github.com/QuezarHQ/solana-wallet-adapter-101/blob/main/src/app/try/page.tsx" className="underline">this</a> script for example code.
             </p>
           </li>
+          <br /><hr /><br />
+          <li>
+            <h3 className="text-lg font-bold m-2">
+              Bonus step: Add a button for signing transactions
+            </h3>
+            <br />
+            <p>Now that we have our wallet all set, we'll setup our app for signing transactions with one more simple step.</p>
+            <br />
+            <p>Add {" "}
+              <a href="https://github.com/QuezarHQ/solana-wallet-adapter-101/blob/main/src/components/SignTransaction.tsx" className="underline">
+                this
+              </a> 
+              {" "} component in your app. And then import it where you'd like to add a button for signing transactions.</p>
+            <br />
+            <p>
+              Under the hood, this component uses the <code className="font-bold">signTransaction</code> functionality which comes buit-in with the solana wallet adapter's <code className="font-bold">useWallet()</code> method. This method can similarly also be used to {" "}
+              <a href="https://github.com/QuezarHQ/solana-wallet-adapter-101/blob/main/src/components/SignMessage.tsx" className="underline">
+                sign messages
+              </a>
+              {" "} or {" "}
+              <a href="https://github.com/QuezarHQ/solana-wallet-adapter-101/blob/main/src/components/SignIn.tsx" className="underline">
+                sign in
+              </a>
+              .
+            </p>
+            <br />
+            <p>Check out the <a href="/try" className="underline">demo page</a> to try all these functionalities!</p>
+          </li>
         </ul>
         <br /><hr /><br />
         <p>
-          That&apos;s it! With these three simple steps, you&apos;ve successfully integrated the Solana Wallet Adapter into your dApp. Your users can now connect their favorite wallets with ease. Happy coding! 😎🚀
+          That's it! With these three simple steps, you've successfully integrated the Solana Wallet Adapter into your dApp. Your users can now connect their favorite wallets with ease. Happy coding! 😎🚀
         </p>
       </div>
       <br />
