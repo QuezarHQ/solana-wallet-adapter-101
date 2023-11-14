@@ -197,7 +197,13 @@ const How = () => {
               .
             </p>
             <br />
-            <p>Check out the <a href="/try" className="underline">demo page</a> to try all these functionalities!</p>
+            <p>
+              Check out the <a href="/try" className="underline">demo page</a> to try all these functionalities!
+            </p>
+            <br />
+            <p>
+              For more details, take a look at the OG <a href="https://github.com/solana-labs/wallet-adapter" className="underline">solana wallet adapter</a> repo. It contains everything from the list of available packages to sample scripts. 
+            </p>
           </li>
         </ul>
         <br /><hr /><br />
