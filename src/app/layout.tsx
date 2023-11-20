@@ -16,12 +16,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="forest">
       <body>
           <Header></Header>
-            <WalletContextProvider>
-              {children}
-            </WalletContextProvider>
+          <WalletContextProvider>
+            {children}
+          </WalletContextProvider>
           <Footer></Footer>
       </body>
     </html>

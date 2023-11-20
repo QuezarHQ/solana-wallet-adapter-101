@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next/link";
 
 const Home = () => {
   return (
-    <div className="border border-gray-300 flex flex-col items-center p-10">
-      <h1 className="text-5xl text-center font-black m-10">
+    <div className="flex flex-col items-center p-10">
+      <h1 className="bg-neutral rounded-full text-5xl text-center font-black p-10">
         Welcome to the Solana Wallet Adapter 101!
       </h1>
       <h2 className="text-2xl text-center font-medium m-5">
@@ -30,7 +31,7 @@ const Home = () => {
           </li>
         </ul>
         <br />
-        <p>Elevate your Solana dApp game – let&apos;s dive in!</p>
+        <p>Elevate your Solana dApp game – <Link href="/what" className="underline">let's dive in</Link>!</p>
       </div>
     </div>
   );
