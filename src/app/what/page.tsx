@@ -2,9 +2,9 @@ import React from "react";
 
 const What = () => {
   return (
-    <div className="border flex flex-col items-center p-10">
+    <div className="flex flex-col items-center p-10">
 
-      <h1 className="text-2xl font-bold m-10">
+      <h1 className="text-primary rounded-full text-2xl font-bold p-4 m-10">
         Meet the Solana Wallet Adapter: Your Easy Way to Add Multiple Wallets
       </h1>
       <br />
@@ -15,17 +15,20 @@ const What = () => {
         <br />
         <ul className="p-5">
         <li>
-          <h4 className="font-bold">Multi-Wallet Magic</h4>
+          <h4 className="font-bold text-primary">Multi-Wallet Magic</h4>
+          <br />
           <p>- The Solana Wallet Adapter comes ready to go with support for multiple Solana wallets. No need to sweat over integrating different wallets individually – it&apos;s all bundled up for you. Whether your users prefer Phantom, Sollet, or something else, the adapter has your back.</p>
         </li>
-        <br />
+        <br /><br />
         <li>
-          <h4 className="font-bold">Web3.js, Solana Style</h4>
+          <h4 className="font-bold text-primary">Web3.js, Solana Style</h4>
+          <br />
           <p> - Just like Metamask injects Web3.js for Ethereum, the Solana Wallet Adapter does the same but with Solana&apos;s Web3.js. This means you can tap into all of Solana&apos;s blockchain powers without breaking a sweat. It&apos;s familiar, it&apos;s easy, and it just works.</p>
         </li>
-        <br />
+        <br /><br />
         <li>
-          <h4 className="font-bold">One-Click Functions</h4>
+          <h4 className="font-bold text-primary">One-Click Functions</h4>
+          <br />
           <p>- The Solana Wallet Adapter simplifies wallet interactions with some nifty features that you can plug and play in your dApp:</p>
           <ul className="p-5">
             <li>1. Select Wallet: Let your users choose their favorite wallet hassle-free.</li>

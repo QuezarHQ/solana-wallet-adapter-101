@@ -118,25 +118,28 @@ const Try = () => {
 
 
   return (
-    <div className="border flex flex-row justify-around p-10">
+    <div className="flex flex-row justify-around p-10">
       <div className="w-1/4">
-        <div className="border border-gray-300 m-5 p-2 h-screen overflow-scroll">
+        <div className="border border-white rounded-lg m-5 p-2 overflow-scroll">
           <div className="p-2">
-            <p className="font-bold">Select UI Kits:</p>
+            <p className="font-bold text-primary">Select UI Kits:</p>
             <ul className="p-2">
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={reactToggle} onChange={toggleReact} /> {" React"}
+                <label className="label cursor-pointer">
+                  <span className="label-text">React</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={reactToggle} onChange={toggleReact} />
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={muiToggle} onChange={toggleMui} /> {" Material UI"}
+                <label className="label cursor-pointer">
+                <span className="label-text">Material UI</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={muiToggle} onChange={toggleMui} />
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={antToggle} onChange={toggleAnt} /> {" Ant Design"}
+                <label className="label cursor-pointer">
+                <span className="label-text">Ant Design</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={antToggle} onChange={toggleAnt} />
                 </label>
               </li>
             </ul>
@@ -144,51 +147,56 @@ const Try = () => {
           <hr />
           <br />
           <div className="p-2">
-            <p className="font-bold">Select Functionalities:</p>
+            <p className="font-bold text-primary">Select Functionalities:</p>
             <ul className="p-2">
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={connectToggle} onChange={toggleConnect} /> {" Connect Wallet Button"}
+                <label className="label cursor-pointer">
+                <span className="label-text">Connect Wallet button</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={connectToggle} onChange={toggleConnect} />
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={disconnectToggle} onChange={toggleDisconnect} /> {" Disconnect Wallet Button"}
+                <label className="label cursor-pointer">
+                <span className="label-text">Disconnect Wallet button</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={disconnectToggle} onChange={toggleDisconnect} />
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={dialogToggle} onChange={toggleDialog} /> {" Dialog/Modal Button"}
+                <label className="label cursor-pointer">
+                <span className="label-text">Dialog/Modal button</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={dialogToggle} onChange={toggleDialog} />
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={multiToggle} onChange={toggleMulti} /> {" Multi Wallet Button"}
+                <label className="label cursor-pointer">
+                <span className="label-text">Multi button</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={multiToggle} onChange={toggleMulti} />
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={signTransactionToggle} onChange={toggleSignTransaction} /> {" Sign Transaction Button"}
+                <label className="label cursor-pointer">
+                <span className="label-text">Sign Transaction button</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={signTransactionToggle} onChange={toggleSignTransaction} />
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={signMessageToggle} onChange={toggleSignMessage} /> {" Sign Message Button"}
+                <label className="label cursor-pointer">
+                <span className="label-text">Sign Message button</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={signMessageToggle} onChange={toggleSignMessage} />
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="" defaultChecked={signInToggle} onChange={toggleSignIn} /> {" Sign In Button"}
+                <label className="label cursor-pointer">
+                <span className="label-text">Sign In button</span>
+                  <input className="checkbox checkbox-primary" type="checkbox" name="" defaultChecked={signInToggle} onChange={toggleSignIn} />
                 </label>
               </li>
             </ul>
           </div>
-          <hr />
-          <br />
         </div>
       </div>
       <div className="w-3/4">
-        <div className="flex flex-row h-screen bg-gray-300 m-5">
+        <div className="flex flex-row h-screen bg-base-100 m-5 font-bold">
           <div className="flex flex-col w-1/4 h-screen">
             <div className="h-2/3 justify-around">
               <div className='flex flex-col h-1/5 items-center justify-center'>

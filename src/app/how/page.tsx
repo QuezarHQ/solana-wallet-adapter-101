@@ -79,8 +79,8 @@ const How = () => {
   const languageJSX = "jsx"
 
   return (
-    <div className="border flex flex-col items-center p-10">
-      <h1 className="text-2xl font-bold m-10">
+    <div className="flex flex-col items-center p-10">
+      <h1 className="text-primary rounded-full text-2xl font-bold p-4 m-10">
         How to Use the Solana Wallet Adapter in Three Simple Steps
       </h1>
       <br />
@@ -91,7 +91,7 @@ const How = () => {
         <br /><hr /><br />
         <ul className="p-5">
           <li>
-            <h3 className="text-lg font-bold m-2">
+            <h3 className="text-primary text-lg font-bold m-2">
               Step 1: Install Necessary Packages
             </h3>
             <br />
@@ -113,7 +113,7 @@ const How = () => {
           </li>
           <br /><hr /><br />
           <li>
-            <h3 className="text-lg font-bold m-2">
+            <h3 className="text-primary text-lg font-bold m-2">
               Step 2: Add Required Configuration Files
             </h3>
             <br />
@@ -151,7 +151,7 @@ const How = () => {
           </li>
           <br /><hr /><br />
           <li>
-            <h3 className="text-lg font-bold m-2">
+            <h3 className="text-primary text-lg font-bold m-2">
               Step 3: Include Wallet Buttons
             </h3>
             <br />
@@ -173,7 +173,7 @@ const How = () => {
           </li>
           <br /><hr /><br />
           <li>
-            <h3 className="text-lg font-bold m-2">
+            <h3 className="text-primary text-lg font-bold m-2">
               Bonus step: Add a button for signing transactions
             </h3>
             <br />
