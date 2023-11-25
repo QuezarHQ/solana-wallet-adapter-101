@@ -204,6 +204,10 @@ const How = () => {
             <p>
               For more details, take a look at the OG <a href="https://github.com/solana-labs/wallet-adapter" className="underline">solana wallet adapter</a> repo. It contains everything from the list of available packages to sample scripts. 
             </p>
+            <br />
+            <p>
+              Also, if you are working with non-react applications and want to integrate the adapter using vanilla JS, this <a href="https://github.com/ronanyeah/solana-connect" className="underline">repo</a> might be a useful example. 
+            </p>
           </li>
         </ul>
         <br /><hr /><br />
